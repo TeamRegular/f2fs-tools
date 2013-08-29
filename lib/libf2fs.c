@@ -24,7 +24,7 @@
 #include <linux/hdreg.h>
 #include <linux/fs.h>
 
-#include <f2fs_fs.h>
+#include "include/f2fs_fs.h"
 
 struct f2fs_configuration config;
 
@@ -374,6 +374,7 @@ void f2fs_init_configuration(struct f2fs_configuration *c)
 	c->trim = 1;
 }
 
+#if 0
 static int is_mounted(const char *mpt, const char *device)
 {
 	FILE *file = NULL;
@@ -428,6 +429,7 @@ int f2fs_dev_is_umounted(struct f2fs_configuration *c)
 	}
 	return 0;
 }
+#endif
 
 int f2fs_get_device_info(struct f2fs_configuration *c)
 {
